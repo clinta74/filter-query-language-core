@@ -1,5 +1,5 @@
 import { get } from 'lodash';
-import { FilterItem, FilterQuery, FilterQueryLanguage, FitlerQueryField } from '..';
+import { FilterItem, FilterQuery, FilterQueryLanguage, FilterQueryField } from '..';
 import { Logics } from '../enums';
 
 /**
@@ -9,7 +9,7 @@ import { Logics } from '../enums';
  * @param filterItems 
  * @param mapper 
  */
-function handleFilterItems<Tobj>(logic: Logics, field: FitlerQueryField<Tobj>, filterItems: FilterItem<Tobj>[], mapper: any) {
+function handleFilterItems<Tobj>(logic: Logics, field: FilterQueryField<Tobj>, filterItems: FilterItem<Tobj>[], mapper: any) {
   const arrayFn = logic === Logics.OR ? Array.prototype.some : Array.prototype.every;
 
   return (item: Tobj) => arrayFn.call(filterItems, (filterItem: FilterItem<Tobj>) => {
@@ -34,7 +34,7 @@ function handleFilterFields<Tobj>(filterQuery: FilterQuery<Tobj>, mapper: any, i
   if (filterItems && filterItems.length === 0) return true;
 
   if (Array.isArray(field)) {
-    return field.some((_field: FitlerQueryField<Tobj>) => {
+    return field.some((_field: FilterQueryField<Tobj>) => {
       return handleFilterItems(filterQuery.logic, _field, filterQuery.filterItems, mapper)(item);
     })
   }
