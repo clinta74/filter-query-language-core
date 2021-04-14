@@ -1,5 +1,6 @@
 # Filter Query Language Core
 Base types and interfaces to store FQL in your application.
+Provides functions to filter a data set using an FQL.
 
 You can view the [demo](https://clinta74.github.io/react-dynamic-filterbar/).
 

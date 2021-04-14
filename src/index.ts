@@ -1,3 +1,5 @@
+import * as comparers from './dataSource/comparers';
+import * as dataFilters from './dataSource/data-filters';
 import { Comparer } from './dataSource/comparers';
 import { Operations, Logics } from './enums';
 
@@ -27,4 +29,11 @@ export interface FilterQuery<Tobj> {
 export interface FilterQueryLanguage<Tobj> {
   logic: Logics,
   filterQueries: FilterQuery<Tobj>[],
+}
+
+export default { 
+  Operations, 
+  Logics,
+  dataFilters,
+  comparers,
 }

@@ -1,6 +1,6 @@
 {
   "name": "filter-query-language-core",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Core logic and structure to use FQL",
   "main": "lib/index.js",
   "scripts": {
