@@ -1,7 +1,8 @@
-import * as comparers from './dataSource/comparers';
-import * as dataFilters from './dataSource/data-filters';
+export * from './dataSource/comparers';
+export * from './dataSource/data-filters';
 import { Comparer } from './dataSource/comparers';
 import { Operations, Logics } from './enums';
+export { Operations, Logics } from './enums';
 
 export type ChangeFQLHander<Tobj> = (fql: FilterQueryLanguage<Tobj>) => void;
 export type RemoveFilterHandler<Tobj> = (field: FilterQueryField<Tobj>) => void;
@@ -29,11 +30,4 @@ export interface FilterQuery<Tobj> {
 export interface FilterQueryLanguage<Tobj> {
   logic: Logics,
   filterQueries: FilterQuery<Tobj>[],
-}
-
-export default { 
-  Operations, 
-  Logics,
-  dataFilters,
-  comparers,
 }
