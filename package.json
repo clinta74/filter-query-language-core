@@ -1,7 +1,7 @@
 {
   "name": "filter-query-language-core",
-  "version": "1.2.0",
-  "description": "Core logic and structure to use FQL. With React hook.",
+  "version": "1.4.0",
+  "description": "Core logic and structure to use FQL.",
   "main": "lib/index.js",
   "scripts": {
     "prepare": "npm run clean && npm run build",
