@@ -19,7 +19,7 @@ Use provided types to store FQL in your app.
 
 ## Understanding Filter Query Language (FQL)
 FQL is designed to be a normalized definition of filters that can be applied to a dataset in a serializable format.  The format
-allows for flexable filter configuration that still includes order of filter application and nested properties. This result is an
+allows for flexable filter configuration that still includes order of filter application and nested properties. This results in an
 object that can represent the WHERE clause of a SQL while keeping the information needed to display the filters.
 
 ``` javascript
