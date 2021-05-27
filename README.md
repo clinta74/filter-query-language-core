@@ -13,6 +13,7 @@ npm install filter-query-language-core
 Use provided types to store FQL in your app.
 
 ``` javascript
+import { FilterQuery, FilterQueryField, FilterQueryLanguage, Logics } from 'filter-query-language-core';
 
 ```
 
